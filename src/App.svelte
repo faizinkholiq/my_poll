@@ -26,6 +26,17 @@
         tabChange({detail: 'Poll List'});
     }
 
+    const handleVote = (e) => {
+        const { id, option } = e.detail;
+        
+        let pollsBunshin = [...polls]
+        let upVoted = pollsBunshin.find((poll) => poll.id == id);
+
+        upVoted['votes'+(option.toUpperCase())]++;
+
+        polls = pollsBunshin;
+    }
+
 </script>
 
 <Header />
@@ -33,7 +44,7 @@
     <Tabs {tabsItems} on:tabChange={tabChange} />
     {#each tabsItems as item}
         {#if item.active && item.name === "Poll List"} 
-            <PollList polls = {polls} />
+            <PollList polls = {polls} on:vote={handleVote}/>
         {:else if item.active && item.name === "Add New Poll"}
             <PollForm on:add = {handleAdd}/>
         {/if}
