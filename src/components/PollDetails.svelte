@@ -1,16 +1,22 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
+    import PollStore from '../stores/PollStore.js';
     import Card from '../shared/Card.svelte';
     export let poll;
-    const dispatch = createEventDispatcher();
 
     // reactive values
     $: totalVotes = poll.votesA + poll.votesB;
-    $: percentA = Math.floor(100 / totalVotes * poll.votesA);
-    $: percentB = Math.floor(100 / totalVotes * poll.votesB);
+    $: percentA = Math.floor((100 / totalVotes) * poll.votesA);
+    $: percentB = Math.floor((100 / totalVotes) * poll.votesB);
 
     const handleVote = (option, id) => {
-        dispatch('vote', { option, id });
+        PollStore.update((currentPolls) => {
+            let pollsBunshin = [...currentPolls];
+            let upVoted = pollsBunshin.find((poll) => poll.id == id);
+
+            upVoted['votes' + option.toUpperCase()]++;
+
+            return pollsBunshin;
+        });
     };
 </script>
 
@@ -60,11 +66,11 @@
         <h3>{poll.question}</h3>
         <p>Total votes: {totalVotes}</p>
         <div class="answer" on:click={() => handleVote('a', poll.id)}>
-            <div class="percent percent-a" style="width: {percentA}%"></div>
+            <div class="percent percent-a" style="width: {percentA}%" />
             <span>{poll.answerA} ({poll.votesA})</span>
         </div>
         <div class="answer" on:click={() => handleVote('b', poll.id)}>
-            <div class="percent percent-b" style="width: {percentB}%"></div>
+            <div class="percent percent-b" style="width: {percentB}%" />
             <span>{poll.answerB} ({poll.votesB})</span>
         </div>
     </div>
