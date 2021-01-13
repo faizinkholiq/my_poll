@@ -22,9 +22,7 @@
 
     const handleDelete = (id) => {
         PollStore.update((currentPolls) => {
-            return currentPolls.filter((poll) => {
-                poll.id != id;
-            });
+            return currentPolls.filter((poll) => poll.id != id);
         });
     };
 </script>
