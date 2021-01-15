@@ -8,6 +8,7 @@ Simple application to vote between 2 different options.
 ### ️🌃 Screenshots: -
 
 <br />
+
 ## Getting started
 Install the dependencies...
 
