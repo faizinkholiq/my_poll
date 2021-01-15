@@ -7,7 +7,7 @@ Simple application to vote between 2 different options.
 - [Svelte](https://svelte.dev/)
 ### ️🌃 Screenshots: -
 
-<br>
+<br />
 ## Getting started
 Install the dependencies...
 
