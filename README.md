@@ -5,8 +5,9 @@ Simple application to vote between 2 different options.
 ## A Little bit about us
 ### 🛠️ Built with :
 - [Svelte](https://svelte.dev/)
-### ️🌃 Screenshots: --
+### ️🌃 Screenshots: -
 
+<br>
 ## Getting started
 Install the dependencies...
 
