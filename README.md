@@ -2,6 +2,8 @@
 # 📊 My Pool
 Simple application to vote between 2 different options.
 
+<br />
+
 ## A Little bit about us
 ### 🛠️ Built with :
 - [Svelte](https://svelte.dev/)
