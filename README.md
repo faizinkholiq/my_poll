@@ -1,9 +1,13 @@
+
 # 📊 My Pool
+Simple application to vote between 2 different options.
 
-_Note that you will need to have [Node.js](https://nodejs.org) installed._
+## A Little bit about us
+### 🛠️ Built with :
+- [Svelte](https://svelte.dev/)
+### ️🌃 Screenshots: --
 
-## Get started
-
+## Getting started
 Install the dependencies...
 
 ```bash
@@ -19,4 +23,5 @@ npm run dev
 
 ---
 
-_for full docs -> [sveltejs](https://svelte.dev)_
+💡 Inspired by [Net Ninja](https://www.youtube.com/watch?v=zojEMeQGGHs&list=PL4cUxeGkcC9hlbrVO_2QFVqVPhlZmz7tO)
+
