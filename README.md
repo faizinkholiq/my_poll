@@ -1,5 +1,5 @@
 
-# 📊 My Pool
+# 📊 My Poll
 Simple application to vote between 2 different options.
 
 <br />
