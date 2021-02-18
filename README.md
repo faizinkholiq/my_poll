@@ -7,8 +7,11 @@ Simple application to vote between 2 different options.
 ## A Little bit about us
 ### 🛠️ Built with :
 - [Svelte](https://svelte.dev/)
-### ️🌃 Screenshots: -
-
+### ️🌃 Screenshots:
+#### 1. Form Page
+ ![Login UI](https://github.com/faizinkholiq/my_poll/blob/master/raw/form.png?raw=true)
+#### 2. Poll Page
+ ![Chat UI](https://github.com/faizinkholiq/my_poll/blob/master/raw/poll.png?raw=true)
 <br />
 
 ## Getting started
